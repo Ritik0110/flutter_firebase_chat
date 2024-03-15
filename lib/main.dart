@@ -1,9 +1,19 @@
+import 'dart:io';
+
 import 'package:adaptive_theme/adaptive_theme.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_chat/main_screen/home_screen.dart';
+import 'package:flutter_firebase_chat/authentication/login_screen.dart';
+
+
+import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  HttpOverrides.global = MyHttpOverrides();
   final savedThemeMode = await AdaptiveTheme.getThemeMode();
   runApp(MyApp(saveThemeMode: savedThemeMode));
 }
@@ -28,8 +38,17 @@ class MyApp extends StatelessWidget {
         theme: theme,
         debugShowCheckedModeBanner: false,
         title: 'Flutter Firebase chat',
-        home: const HomeScreen(),
+        home: const LoginScreen(),
       ),
     );
+  }
+}
+
+class MyHttpOverrides extends HttpOverrides {
+  @override
+  HttpClient createHttpClient(SecurityContext? context) {
+    return super.createHttpClient(context)
+      ..badCertificateCallback =
+          (X509Certificate cert, String host, int port) => true;
   }
 }
