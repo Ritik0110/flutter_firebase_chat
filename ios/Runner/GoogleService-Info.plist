@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyAuQan5G9DHwF7rHS6dPgWwtDQegmdl8Ko</string>
+	<key>GCM_SENDER_ID</key>
+	<string>757586974532</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.practice.ChatClone</string>
+	<key>PROJECT_ID</key>
+	<string>chatclone-60685</string>
+	<key>STORAGE_BUCKET</key>
+	<string>chatclone-60685.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:757586974532:ios:b6994e1890da5ac6f86911</string>
+</dict>
+</plist>
